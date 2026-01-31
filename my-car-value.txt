@@ -1,0 +1,30 @@
+***Used Car Pricing API***
+1) Users sign up with email/passwod
+2) Users get an estimate for how much their car is worth based on the make/model/year/mileage
+3) Users can report what they sold their vehicles for
+4) Admins have to approve reported sales
+
+Method and Route --->
+POST/auth/signup
+POST/auth/signin
+GET/reports
+POST/reports
+PATCH/reports
+
+Body or Query String --->
+Body - {email, password}
+Body - {email, password}
+QS - make, model, year, mileage, longitude, latitude
+Body - {make, model, year, mileage, longitude, latitude, price}
+Body - {approved}
+
+Description --->
+Create a new user and sign in
+Sign in as an existing user
+Get and estimate for the cars value
+Report how much a vehicle sold for
+Approve or reject a report submitted by a user
+
+Controllers ---> Users Controller / Reports Controller
+Services ---> Users Service / Reports Service
+Repositories ---> Users Repository / Reports Repository
