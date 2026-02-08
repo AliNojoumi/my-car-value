@@ -28,3 +28,10 @@ Approve or reject a report submitted by a user
 Controllers ---> Users Controller / Reports Controller
 Services ---> Users Service / Reports Service
 Repositories ---> Users Repository / Reports Repository
+
+Method and Route ===>
+PSOT/auth/signup - Body{email,password} - Create a new user ::: Controller Method - createUser ::: Service Method - create
+GET/auth/:id - - - Find a user with given id ::: Controller Method - findUser ::: Service Method - findOne
+GET/auth?email=... - - - Find all users with given email ::: Controller Method - findAllUsers ::: Service Method - find
+PATHCH/auth/:id - Body{email, password} - Update a user with given id ::: Controller Method - updateUser ::: Service Method - update
+DELETE/auth/:id - - - Delete user with given id ::: Controller Method - removeUser ::: Service Method - remove
